@@ -13,7 +13,7 @@ void main() {
   vec3 brightness = vec3(.1, .1, .9);
   vec3 contrast = vec3(.3, .3, .3);
   vec3 oscillation = vec3(.5, .5, .9);
-  vec3 phase = vec3(.9, .1, .8);
+  vec3 phase = vec3(1, .5, 1.7);
 
   vec3 color = cosPalette(distort, brightness, contrast, oscillation, phase);
 

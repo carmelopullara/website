@@ -1,13 +1,10 @@
 :root {
-  --max-width: 1100px;
+  --max-width: 1000px;
   --dark: #000;
   --white: #fff;
-  --grid-item-width: 100px;
-  --grid-item-height: 60px;
   --primary: #2695ff;
-  --primary-rgb: 38, 149, 255;
-  --secondary: #ff3061;
-  --secondary-rgb: 255, 0, 60;
+  --secondary: #cc07cd;
+  --gradient: linear-gradient(225deg, var(--secondary) 25%, var(--primary));
 }
 
 body {
@@ -30,19 +27,21 @@ a {
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 html,
 body {
   height: 100%;
   max-width: 100vw;
-  overflow-x: hidden;
   color: #fff;
 }
 
 body {
-  line-height: 1.5;
+  line-height: 1.4;
   -webkit-font-smoothing: antialiased;
+  scrollbar-width: thin;
+  scrollbar-color: var(--dark) rgba(255, 255, 255, 0.2);
 }
 
 img,
@@ -77,6 +76,23 @@ h6 {
 }
 
 ::selection {
-  background-color: var(--primary);
-  color: var(--white);
+  background-color: var(--secondary);
+  color: var(--dark);
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  -moz-background-clip: initial;
+  -moz-text-fill-color: initial;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--dark);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0px;
 }

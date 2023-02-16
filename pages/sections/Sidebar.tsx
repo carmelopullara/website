@@ -1,6 +1,8 @@
 import styled from '@emotion/styled'
 import { ReactElement } from 'react'
 import { GitHub, Linkedin, Mail, Twitter } from 'react-feather'
+import Animation from '../components/Animation'
+import { mq } from '../constants'
 
 interface Link {
   href: string
@@ -26,18 +28,20 @@ const links: Link[] = [
   },
 ]
 
-const StyledSidebar = styled.aside`
+const List = styled.div`
   position: fixed;
-  left: 0;
-  top: 5rem;
-  width: 5rem;
-  height: calc(100vh - 5rem);
-  z-index: 90;
+  bottom: 0;
+  left: 5rem;
+  padding: 2rem 0 6rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-end;
-  padding: 2rem 0 4rem;
+  align-items: center;
+  gap: 2rem;
+  z-index: 100;
+  ${mq[3]} {
+    display: none;
+  }
   &:after {
     content: '';
     width: 1px;
@@ -50,20 +54,10 @@ const StyledSidebar = styled.aside`
   }
 `
 
-const List = styled.div`
-  position: relative;
-  padding: 2rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 2rem;
-`
-
 const Icon = styled.div`
   &:hover  {
     svg {
-      color: var(--primary);
+      color: var(--secondary);
       transform: scale(1.1);
     }
   }
@@ -73,16 +67,24 @@ const Icon = styled.div`
   }
 `
 
-export const Sidebar = () => {
+const Sidebar = () => {
   return (
-    <StyledSidebar>
-      <List>
-        {links.map((link, index) => (
+    <List>
+      {links.map((link, index) => (
+        <Animation
+          start={{ translateX: -20 }}
+          stop={{ translateX: 0 }}
+          key={index}
+          duration={0.5}
+          delay={(index + 1) * 0.25}
+        >
           <a key={index} href={link.href} target="_blank" rel="noreferrer">
             <Icon>{link.icon}</Icon>
           </a>
-        ))}
-      </List>
-    </StyledSidebar>
+        </Animation>
+      ))}
+    </List>
   )
 }
+
+export default Sidebar

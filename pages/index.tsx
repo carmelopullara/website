@@ -1,11 +1,53 @@
 import Head from 'next/head'
+import About from './sections/About'
+import Header from './sections/Header'
+import Sidebar from './sections/Sidebar'
+import Background from './sections/Background'
+import Experience from './sections/Experience'
+
 import localFont from '@next/font/local'
-import { About } from './sections/About'
-import { Header } from './sections/Header'
-import { Sidebar } from './sections/Sidebar'
-import { Canvas } from './sections/Canvas'
+import { useEffect, useState } from 'react'
+import Loading from './sections/Loading'
+import Stack from './sections/Stack'
+
+export const primaryFont = localFont({
+  src: [
+    {
+      path: 'fonts/Mabry-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: 'fonts/Mabry-Regular.woff',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: 'fonts/Mabry-Bold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: 'fonts/Mabry-Bold.woff',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+})
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    function clearLoading() {
+      setIsLoading(false)
+    }
+
+    const timeout = setTimeout(clearLoading, 1500)
+
+    return () => clearTimeout(timeout)
+  }, [])
+
   return (
     <>
       <Head>
@@ -14,11 +56,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-      <Sidebar />
-      <main>
-        <Canvas />
+      {isLoading && <Loading />}
+      <main className={primaryFont.className} hidden={isLoading}>
+        <Header />
+        <Sidebar />
+        <Background />
         <About />
+        <Experience />
+        <Stack />
       </main>
     </>
   )
