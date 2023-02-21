@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import Animation from '../components/Animation'
-import { Button } from '../components/Button'
+import Button from '../components/Button'
 import Container from '../components/Container'
 import Section from '../components/Section'
 import SectionTitle from '../components/SectionTitle'

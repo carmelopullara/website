@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { FC } from 'react'
-import { monoFont } from './Header'
 import Animation from './Animation'
+import { monoFont } from './Header'
 
 interface Props {
   title: string

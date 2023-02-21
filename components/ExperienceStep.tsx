@@ -1,7 +1,7 @@
-import React, { FC, useEffect } from 'react'
-import { useAnimation, motion, Variants } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
 import { css } from '@emotion/css'
+import { motion, useAnimation } from 'framer-motion'
+import React, { FC, useEffect } from 'react'
+import { useInView } from 'react-intersection-observer'
 
 type Props = {
   children?: React.ReactNode
@@ -27,7 +27,7 @@ const ExperienceStep: FC<Props> = ({ children, start, delay }) => {
       className={css`
         border-left: 1px solid var(--primary);
         border-right: 1px solid var(--secondary);
-        background-image: var(--gradient),var(--gradient);
+        background-image: var(--gradient), var(--gradient);
         background-size: 100% 1px;
         background-position: 0 0, 0 100%;
         background-repeat: no-repeat;

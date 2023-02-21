@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
 import { Anonymous_Pro } from '@next/font/google'
+import { mq } from '../lib/mediaQueries'
 import Animation from './Animation'
 import Container from './Container'
-import { mq } from '../constants'
 
 export const monoFont = Anonymous_Pro({
   subsets: ['latin'],

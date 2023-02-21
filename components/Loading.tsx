@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { motion } from 'framer-motion'
-import { primaryFont } from '..'
+import { primaryFont } from '../pages'
 
 const LoadingScreen = styled.div`
   position: fixed;

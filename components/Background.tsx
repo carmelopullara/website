@@ -1,11 +1,11 @@
-import * as THREE from 'three'
 import styled from '@emotion/styled'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { useEffect, useRef } from 'react'
-import { Mesh, ShaderMaterial } from 'three'
 import gsap from 'gsap'
-import vertexShader from '../shaders/vertex.glsl'
+import { useEffect, useRef } from 'react'
+import * as THREE from 'three'
+import { Mesh, ShaderMaterial } from 'three'
 import fragmentShader from '../shaders/fragment.glsl'
+import vertexShader from '../shaders/vertex.glsl'
 
 const Wrapper = styled.div`
   position: fixed;
@@ -153,7 +153,7 @@ const Sphere = () => {
   )
 }
 
-const Background = () => {
+export const Background = () => {
   return (
     <Wrapper>
       <Canvas
@@ -170,5 +170,3 @@ const Background = () => {
     </Wrapper>
   )
 }
-
-export default Background

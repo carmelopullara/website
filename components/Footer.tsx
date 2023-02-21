@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import Link from 'next/link'
-import { primaryFont } from '..'
-import { mq } from '../constants'
+import { mq } from '../lib/mediaQueries'
+import { primaryFont } from '../pages'
 import Animation from './Animation'
 import { SocialIcon, socialLinks } from './Sidebar'
 

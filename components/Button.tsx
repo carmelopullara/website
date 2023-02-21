@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-export const Button = styled.a`
+const Button = styled.a`
   position: relative;
   display: inline-block;
   padding: 0.8rem 2rem;
@@ -25,3 +25,4 @@ export const Button = styled.a`
     width: 100%;
   }
 `
+export default Button

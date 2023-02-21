@@ -3,7 +3,7 @@ import Animation from '../components/Animation'
 import Container from '../components/Container'
 import Section from '../components/Section'
 import SectionTitle from '../components/SectionTitle'
-import { mq } from '../constants'
+import { mq } from '../lib/mediaQueries'
 
 interface Item {
   name: string

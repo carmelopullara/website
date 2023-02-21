@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
 import Animation from '../components/Animation'
-import { Button } from '../components/Button'
+import Button from '../components/Button'
 import Container from '../components/Container'
-import { mq } from '../constants'
+import { mq } from '../lib/mediaQueries'
 
 const AboutSection = styled.section`
   min-height: 100vh;

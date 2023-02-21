@@ -4,7 +4,7 @@ import Container from '../components/Container'
 import Link from 'next/link'
 import Section from '../components/Section'
 import SectionTitle from '../components/SectionTitle'
-import { mq } from '../constants'
+import { mq } from '../lib/mediaQueries'
 
 interface Step {
   company: string

@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
 import { ReactElement } from 'react'
 import { GitHub, Linkedin, Mail, Twitter } from 'react-feather'
+import { mq } from '../lib/mediaQueries'
 import Animation from './Animation'
-import { mq } from '../constants'
 
 interface Link {
   href: string

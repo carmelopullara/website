@@ -1,36 +1,36 @@
 import Head from 'next/head'
-import About from './sections/About'
-import Header from './components/Header'
-import Sidebar from './components/Sidebar'
-import Background from './components/Background'
-import Experience from './sections/Experience'
+import { Background } from '../components/Background'
+import Header from '../components/Header'
+import Sidebar from '../components/Sidebar'
+import About from '../sections/About'
+import Experience from '../sections/Experience'
 
 import localFont from '@next/font/local'
 import { useEffect, useState } from 'react'
-import Loading from './components/Loading'
-import Stack from './sections/Stack'
-import Contact from './sections/Contact'
-import Footer from './components/Footer'
+import Footer from '../components/Footer'
+import Loading from '../components/Loading'
+import Contact from '../sections/Contact'
+import Stack from '../sections/Stack'
 
 export const primaryFont = localFont({
   src: [
     {
-      path: 'fonts/Mabry-Regular.woff2',
+      path: '../fonts/Mabry-Regular.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: 'fonts/Mabry-Regular.woff',
+      path: '../fonts/Mabry-Regular.woff',
       weight: '400',
       style: 'normal',
     },
     {
-      path: 'fonts/Mabry-Bold.woff2',
+      path: '../fonts/Mabry-Bold.woff2',
       weight: '700',
       style: 'normal',
     },
     {
-      path: 'fonts/Mabry-Bold.woff',
+      path: '../fonts/Mabry-Bold.woff',
       weight: '700',
       style: 'normal',
     },
