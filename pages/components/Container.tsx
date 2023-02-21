@@ -2,11 +2,11 @@ import styled from '@emotion/styled'
 import { FC } from 'react'
 
 const StyledContainer = styled.div`
-  width: var(--max-width);
+  width: 100%;
+  max-width: var(--max-width);
   padding-left: 1rem;
   padding-right: 1rem;
   margin: auto;
-  max-width: 100%;
 `
 
 type Props = {

@@ -1,14 +1,16 @@
 import Head from 'next/head'
 import About from './sections/About'
-import Header from './sections/Header'
-import Sidebar from './sections/Sidebar'
-import Background from './sections/Background'
+import Header from './components/Header'
+import Sidebar from './components/Sidebar'
+import Background from './components/Background'
 import Experience from './sections/Experience'
 
 import localFont from '@next/font/local'
 import { useEffect, useState } from 'react'
-import Loading from './sections/Loading'
+import Loading from './components/Loading'
 import Stack from './sections/Stack'
+import Contact from './sections/Contact'
+import Footer from './components/Footer'
 
 export const primaryFont = localFont({
   src: [
@@ -43,7 +45,7 @@ export default function Home() {
       setIsLoading(false)
     }
 
-    const timeout = setTimeout(clearLoading, 1500)
+    const timeout = setTimeout(clearLoading, 2000)
 
     return () => clearTimeout(timeout)
   }, [])
@@ -57,14 +59,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {isLoading && <Loading />}
-      <main className={primaryFont.className} hidden={isLoading}>
+      <div hidden={isLoading}>
         <Header />
         <Sidebar />
-        <Background />
-        <About />
-        <Experience />
-        <Stack />
-      </main>
+        <main className={primaryFont.className}>
+          <Background />
+          <About />
+          <Experience />
+          <Stack />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
     </>
   )
 }

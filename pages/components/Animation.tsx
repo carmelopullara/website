@@ -1,4 +1,4 @@
-import { useAnimation, motion } from 'framer-motion'
+import { useAnimation, motion, MotionStyle } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { FC, ReactNode, useEffect } from 'react'
 
@@ -8,6 +8,7 @@ interface Props {
   delay?: number
   duration?: number
   children?: ReactNode
+  style?: MotionStyle
 }
 
 const Animation: FC<Props> = ({
@@ -15,6 +16,7 @@ const Animation: FC<Props> = ({
   stop,
   duration = 1,
   delay,
+  style,
   children,
 }) => {
   const controls = useAnimation()
@@ -31,6 +33,7 @@ const Animation: FC<Props> = ({
       ref={ref}
       animate={controls}
       initial="from"
+      style={style}
       variants={{
         from: {
           opacity: 0,

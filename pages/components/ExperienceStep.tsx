@@ -32,7 +32,7 @@ const ExperienceStep: FC<Props> = ({ children, start, delay }) => {
         background-position: 0 0, 0 100%;
         background-repeat: no-repeat;
         background-color: rgba(0, 0, 0, 0.2);
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(5px);
         padding: 3rem;
       `}
       variants={{

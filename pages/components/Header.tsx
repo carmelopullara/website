@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import { Anonymous_Pro } from '@next/font/google'
-import Animation from '../components/Animation'
+import Animation from './Animation'
+import Container from './Container'
 import { mq } from '../constants'
 
 export const monoFont = Anonymous_Pro({
@@ -83,22 +84,24 @@ const links: HeaderLink[] = [
 const Header = () => {
   return (
     <HeaderWrapper className={monoFont.className}>
-      <Menu>
-        {links.map((link, index) => (
-          <Animation
-            start={{ scale: 0 }}
-            stop={{ scale: 1 }}
-            key={link.label}
-            duration={0.5}
-            delay={index * 0.3}
-          >
-            <Link href={link.href}>
-              <Counter>{`0${index + 1}`}.</Counter>
-              <Text>{link.label}</Text>
-            </Link>
-          </Animation>
-        ))}
-      </Menu>
+      <Container>
+        <Menu>
+          {links.map((link, index) => (
+            <Animation
+              start={{ scale: 0 }}
+              stop={{ scale: 1 }}
+              key={link.label}
+              duration={0.5}
+              delay={index * 0.3}
+            >
+              <Link href={link.href}>
+                <Counter>{`0${index + 1}`}.</Counter>
+                <Text>{link.label}</Text>
+              </Link>
+            </Animation>
+          ))}
+        </Menu>
+      </Container>
     </HeaderWrapper>
   )
 }

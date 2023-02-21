@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { ReactElement } from 'react'
 import { GitHub, Linkedin, Mail, Twitter } from 'react-feather'
-import Animation from '../components/Animation'
+import Animation from './Animation'
 import { mq } from '../constants'
 
 interface Link {
@@ -9,7 +9,7 @@ interface Link {
   icon: ReactElement
 }
 
-const links: Link[] = [
+export const socialLinks: Link[] = [
   {
     href: 'https://github.com/carmelopullara',
     icon: <GitHub />,
@@ -54,7 +54,7 @@ const List = styled.div`
   }
 `
 
-const Icon = styled.div`
+export const SocialIcon = styled.div`
   &:hover  {
     svg {
       color: var(--secondary);
@@ -70,7 +70,7 @@ const Icon = styled.div`
 const Sidebar = () => {
   return (
     <List>
-      {links.map((link, index) => (
+      {socialLinks.map((link, index) => (
         <Animation
           start={{ translateX: -20 }}
           stop={{ translateX: 0 }}
@@ -79,7 +79,7 @@ const Sidebar = () => {
           delay={(index + 1) * 0.25}
         >
           <a key={index} href={link.href} target="_blank" rel="noreferrer">
-            <Icon>{link.icon}</Icon>
+            <SocialIcon>{link.icon}</SocialIcon>
           </a>
         </Animation>
       ))}

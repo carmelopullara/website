@@ -3,6 +3,7 @@ import Animation from '../components/Animation'
 import Container from '../components/Container'
 import Section from '../components/Section'
 import SectionTitle from '../components/SectionTitle'
+import { mq } from '../constants'
 
 interface Item {
   name: string
@@ -56,8 +57,6 @@ const Element = styled.div<{ $color: string }>`
   border: 2px solid ${(props) => props.$color};
   color: ${(props) => props.$color};
   transition: all 0.3s ease;
-  background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(20px);
   &:hover {
     transform: scale(1.05);
     background-color: ${(props) => props.$color};
@@ -77,11 +76,24 @@ const ItemName = styled.h3`
 const FirstSpacer = styled.div`
   grid-column: 3 / span 4;
   grid-row: 1;
+  ${mq[2]} {
+    grid-column: 2 / span 3;
+  }
+  ${mq[1]} {
+    display: none;
+  }
 `
 
 const SecondSpacer = styled.div`
   grid-column: 1 / span 3;
   grid-row: 4;
+  ${mq[2]} {
+    grid-column: 1 / span 2;
+    grid-row: 5;
+  }
+  ${mq[1]} {
+    display: none;
+  }
 `
 
 const getAbbreviation = (value: string) => {
@@ -99,7 +111,7 @@ const Stack = () => {
   return (
     <Section id="stack">
       <Container>
-        <SectionTitle title="Stack" number="02" />
+        <SectionTitle title="Stack" number="03" />
         <Table>
           <FirstSpacer />
           <SecondSpacer />
@@ -108,7 +120,11 @@ const Stack = () => {
               start={{ scale: 0.7 }}
               stop={{ scale: 1 }}
               duration={0.5}
-              delay={(index / 4) * 0.25}
+              delay={(index / 4) * 0.15}
+              style={{
+                backgroundColor: 'rgba(0, 0, 0, 0.2)',
+                backdropFilter: 'blur(5px)',
+              }}
               key={item.name}
             >
               <Element $color={item.color}>

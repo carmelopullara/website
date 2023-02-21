@@ -26,19 +26,19 @@ const Wrapper = styled.div`
 const settings = {
   uFrequency: {
     start: 1,
-    end: 4,
+    end: 2,
   },
   uAmplitude: {
     start: 4,
     end: 4,
   },
   uDensity: {
-    start: 1.2,
-    end: 1.4,
+    start: 1,
+    end: 1.2,
   },
   uStrength: {
     start: 0.6,
-    end: 1.4,
+    end: 1.2,
   },
   uDeepPurple: {
     start: 0.2,
@@ -59,14 +59,14 @@ const Sphere = () => {
 
   useFrame((_, delta) => {
     if (meshRef.current) {
-      meshRef.current.rotation.y += delta * 0.2
+      meshRef.current.rotation.y += delta * 0.15
     }
   })
 
   useEffect(() => {
     const onMouseMove = (event: MouseEvent) => {
-      const mouseX = Number((event.clientX / window.innerWidth).toFixed(2)) * 4
-      const mouseY = Number((event.clientY / window.innerHeight).toFixed(2)) * 4
+      const mouseX = Number((event.clientX / window.innerWidth).toFixed(2)) * 2
+      const mouseY = Number((event.clientY / window.innerHeight).toFixed(2)) * 2
 
       if (!materialRef.current) return
 

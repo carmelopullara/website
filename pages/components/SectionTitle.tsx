@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { FC } from 'react'
-import { monoFont } from '../sections/Header'
+import { monoFont } from './Header'
 import Animation from './Animation'
 
 interface Props {
@@ -13,6 +13,7 @@ const Title = styled.h2`
   font-size: 1.2rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   &:before {
     font-family: ${monoFont.style.fontFamily};
@@ -20,17 +21,12 @@ const Title = styled.h2`
     content: attr(data-number) '.';
     margin-right: 0.5rem;
     color: var(--primary);
+    background-image: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
     font-weight: 400;
-  }
-  &:after {
-    content: '';
-    display: block;
-    position: relative;
-    width: 300px;
-    height: 1px;
-    top: 1px;
-    margin-left: 1rem;
-    background-color: rgba(255, 255, 255, 0.6);
   }
 `
 
