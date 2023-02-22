@@ -123,7 +123,7 @@ const Stack = () => {
               delay={(index / 4) * 0.15}
               style={{
                 backgroundColor: 'rgba(0, 0, 0, 0.2)',
-                backdropFilter: 'blur(5px)',
+                backdropFilter: 'blur(10px)',
               }}
               key={item.name}
             >
