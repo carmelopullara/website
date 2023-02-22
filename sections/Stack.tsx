@@ -124,6 +124,7 @@ const Stack = () => {
               style={{
                 backgroundColor: 'rgba(0, 0, 0, 0.2)',
                 backdropFilter: 'blur(10px)',
+                WebkitBackdropFilter: 'blur(10px)',
               }}
               key={item.name}
             >

@@ -2,8 +2,7 @@ import styled from '@emotion/styled'
 import { Canvas, useFrame } from '@react-three/fiber'
 import gsap from 'gsap'
 import { useEffect, useRef } from 'react'
-import * as THREE from 'three'
-import { Mesh, ShaderMaterial } from 'three'
+import { Mesh, ShaderMaterial, AdditiveBlending } from 'three'
 import fragmentShader from '../shaders/fragment.glsl'
 import vertexShader from '../shaders/vertex.glsl'
 
@@ -137,7 +136,7 @@ const Sphere = () => {
         ref={materialRef}
         wireframe={true}
         transparent={true}
-        blending={THREE.AdditiveBlending}
+        blending={AdditiveBlending}
         fragmentShader={fragmentShader}
         vertexShader={vertexShader}
         uniforms={{
