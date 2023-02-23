@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 import { motion } from 'framer-motion'
-import { primaryFont } from '../pages'
 
 const LoadingScreen = styled.div`
   position: fixed;
@@ -33,7 +32,7 @@ const Loading = () => {
           duration: 2,
         }}
       />
-      <h4 className={primaryFont.className}>Loading...</h4>
+      <h4>Loading...</h4>
     </LoadingScreen>
   )
 }

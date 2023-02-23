@@ -1,15 +1,10 @@
 import styled from '@emotion/styled'
-import { Anonymous_Pro } from '@next/font/google'
 import { mq } from '../lib/mediaQueries'
 import Animation from './Animation'
 import Container from './Container'
 
-export const monoFont = Anonymous_Pro({
-  subsets: ['latin'],
-  weight: ['400'],
-})
-
 const HeaderWrapper = styled.header`
+  font-family: 'Anonymous Pro', monospace;
   height: 5rem;
   display: flex;
   align-items: center;
@@ -83,7 +78,7 @@ const links: HeaderLink[] = [
 
 const Header = () => {
   return (
-    <HeaderWrapper className={monoFont.className}>
+    <HeaderWrapper>
       <Container>
         <Menu>
           {links.map((link, index) => (

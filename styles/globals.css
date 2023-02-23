@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+
 :root {
   --max-width: 1000px;
   --dark: #000;
@@ -7,8 +9,25 @@
   --gradient: linear-gradient(225deg, var(--secondary) 25%, var(--primary));
 }
 
+@font-face {
+  font-family: 'Mabry';
+  font-display: auto;
+  src: url('../fonts/Mabry-Regular.woff2');
+  src: url('../fonts/Mabry-Regular.woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Mabry';
+  font-display: auto;
+  src: url('../fonts/Mabry-Bold.woff2');
+  src: url('../fonts/Mabry-Bold.woff');
+  font-weight: 700;
+}
+
 body {
   background-color: var(--dark);
+  font-family: 'Mabry', sans-serif;
 }
 
 a {

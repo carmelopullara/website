@@ -5,37 +5,16 @@ import Sidebar from '../components/Sidebar'
 import About from '../sections/About'
 import Experience from '../sections/Experience'
 
-import localFont from '@next/font/local'
 import { useEffect, useState } from 'react'
 import Footer from '../components/Footer'
 import Loading from '../components/Loading'
 import Contact from '../sections/Contact'
 import Stack from '../sections/Stack'
+import styled from '@emotion/styled'
 
-export const primaryFont = localFont({
-  src: [
-    {
-      path: '../fonts/Mabry-Regular.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../fonts/Mabry-Regular.woff',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../fonts/Mabry-Bold.woff2',
-      weight: '700',
-      style: 'normal',
-    },
-    {
-      path: '../fonts/Mabry-Bold.woff',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
-})
+const Main = styled.main`
+  overflow-x: hidden;
+`
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
@@ -76,13 +55,13 @@ export default function Home() {
       <div hidden={isLoading}>
         <Header />
         <Sidebar />
-        <main className={primaryFont.className}>
+        <Main>
           <Background />
           <About />
           <Experience />
           <Stack />
           <Contact />
-        </main>
+        </Main>
         <Footer />
       </div>
     </>

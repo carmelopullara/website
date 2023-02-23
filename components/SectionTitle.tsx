@@ -1,7 +1,6 @@
 import styled from '@emotion/styled'
 import { FC } from 'react'
 import Animation from './Animation'
-import { monoFont } from './Header'
 
 interface Props {
   title: string
@@ -16,7 +15,7 @@ const Title = styled.h2`
   justify-content: center;
   position: relative;
   &:before {
-    font-family: ${monoFont.style.fontFamily};
+    font-family: 'Anonymous Pro', monospace;
     position: relative;
     content: attr(data-number) '.';
     margin-right: 0.5rem;

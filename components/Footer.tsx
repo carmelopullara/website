@@ -1,7 +1,6 @@
 import styled from '@emotion/styled'
 import Link from 'next/link'
 import { mq } from '../lib/mediaQueries'
-import { primaryFont } from '../pages'
 import Animation from './Animation'
 import { SocialIcon, socialLinks } from './Sidebar'
 
@@ -9,7 +8,6 @@ const StyledFooter = styled.footer`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: ${primaryFont.style.fontFamily};
   padding: 2rem 0;
 `
 
