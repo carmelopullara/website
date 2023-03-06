@@ -4,6 +4,8 @@ import { mq } from '../lib/mediaQueries'
 import Animation from './Animation'
 import { SocialIcon, socialLinks } from './Sidebar'
 
+const year = new Date()
+
 const StyledFooter = styled.footer`
   display: flex;
   flex-direction: column;
@@ -22,12 +24,14 @@ const List = styled.div`
 
 const Copyright = styled.p`
   font-size: 1rem;
-  &:hover {
-    background-image: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
+  > a {
+    &:hover {
+      background-image: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+    }
   }
 `
 
@@ -50,12 +54,16 @@ const Footer = () => {
         ))}
       </List>
       <Copyright>
+        &copy; {year.getFullYear()} Carmelo Pullara - VAT 02908650845
+      </Copyright>
+      <br />
+      <Copyright>
         <Link
           href="https://github.com/carmelopullara/website"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Developed and designed by Carmelo Pullara
+          <small>The code for this website is open source</small>
         </Link>
       </Copyright>
     </StyledFooter>
