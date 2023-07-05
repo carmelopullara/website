@@ -15,6 +15,16 @@ interface Step {
 
 const steps: Step[] = [
   {
+    company: 'Panther',
+    url: 'https://panther.co',
+    dates: '2023-Current',
+    points: [
+      'Led a collaborative team of frontend engineers to surpass project milestones ahead of schedule, leading to high performance and heightened productivity.',
+      'Restructured the networking layer and state management, which reduced network latency and enhanced API efficiency. This amplified user experience and accelerated data retrieval.',
+      'Innovated new features leading to growth in both customer acquisition and retention.',
+    ],
+  },
+  {
     company: 'Veza',
     url: 'https://veza.com',
     dates: '2020-2023',
@@ -23,7 +33,6 @@ const steps: Step[] = [
       'Built and owned multiple core features of the product that lead to sales increase.',
       'Collaborated with different teams including backend engineers, designers and product managers.',
       'Wrote end-to-end and unit tests that significantly increased coverage.',
-      // 'Utilized: TypeScript, React, MobX, styled-components, Node.js, Cypress, Jest.',
     ],
   },
   {
@@ -35,8 +44,6 @@ const steps: Step[] = [
       'Built two interactive experiences with React for the National Air and Space Museum of Washington.',
       'Developed an MVP for a Dutch real estate website and implemented it in a Laravel application',
       'Built a series of landing pages for the insurance industry with dynamics, multi-step forms that increased the conversion rate.',
-      // 'Utilized Agile methodologies to manage project timelines and deliverables.',
-      // 'Utilized: React, Redux, react-dnd, CSS, Node.js, Laravel, Ruby on Rails, Cypress.',
     ],
   },
   {
@@ -47,7 +54,6 @@ const steps: Step[] = [
       'Designed and developed different interactive and animated websites for gaming and movie industries.',
       'Worked closely with UX/UI designers and back-end developers to ensure seamless integration and functionality.',
       'Collaborated with project managers to ensure timely delivery of projects within budget constraints.',
-      // 'Utilized: WordPress, React, CSS, Node.js.',
     ],
   },
   {
@@ -58,7 +64,6 @@ const steps: Step[] = [
       'Built a social network for the entertainment industry.',
       'Became Elite Author at Envato and sold premium WordPress themes to over 6000 customers',
       'Provided technical support to a large customer base, responding to inquiries and troubleshooting issues.',
-      // 'Utilized: WordPress, PHP, React, CSS, Node.js.',
     ],
   },
 ]
